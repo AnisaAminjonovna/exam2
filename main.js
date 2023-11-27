@@ -3,6 +3,7 @@ let elTemplate = document.querySelector(".template").content
 
 
 function renderArr(arr, list){
+    list.innerHTML = null
     arr.map(item => {
         let cloneTemplate = elTemplate.cloneNode(true)
 
@@ -12,13 +13,17 @@ function renderArr(arr, list){
 
         cardTitle.textContent = item.title
         cardImg.src = item.image
-        cardInfo.textContent = item.price
+        cardInfo.textContent ="$" + item.price
 
         
         list.appendChild(cloneTemplate)
     })
 }
 
-fetch("https://fakestoreapi.com/products")
+function fetchData(){
+    elList.innerHTML = "<img src = 'loading.gif'>"
+    fetch("https://fakestoreapi.com/products")
 .then(res => res.json())
 .then(data => renderArr(data, elList))
+}
+fetchData()
