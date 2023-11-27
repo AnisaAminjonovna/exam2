@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sens-serif;
+
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #2d676d;
+    
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 10px;
+    background: url("hero-bg.jpg") center / cover no-repeat;
+   
+   
+}
+.navbar{
+    padding: 22px 0px;
+    display: flex;
+   align-items: center;
+   max-width: 1200px;
+   margin: 0 auto;
+   justify-content: space-between;
+}
+.navbar .logo{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+}
+.navbar .logo h2{
+    color: #fff;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.navbar .links{
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+.navbar .links a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.navbar .links a:hover{
+    color: #19e8ff;
+}
+.card__wrapper{
+    max-width: 1200px;
+    /* border: 1px solid red; */
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem;
+    justify-content: center;
+    
+}
+.card__wrapper .card{
+    width: 30%;
+    box-shadow: 0 0 8px grey;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+.card__wrapper .card img{
+    width: 100%;
+    height: 280px;
+}
+
+
+@media (max-width: 950px) {
+    .navbar{
+        padding: 15px 0;
+    }
+    .navbar .logo{
+        font-size: 1.4rem;
+    }
+    .navbar .links{
+        display: none;
+    }
+}
+/* .nav,
+.nav_item{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_logo{
+    font-size: 25px;
+}
+.nav_item{
+    column-gap: 25px;
+}
+.nav_link, .nav_logo{
+    color: #fff;
+}
+.nav_link:hover{
+    color: #d9d9d9;
+
+}
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url("imeges.jpg");
+    background-size: cover;
+    background-position: center;
+} */
